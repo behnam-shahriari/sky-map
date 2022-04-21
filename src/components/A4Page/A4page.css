@@ -1,0 +1,14 @@
+.container {
+  display: grid;
+  background-color: #f3f3f3;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.wrapped {
+  background-color: #fff;
+  grid-area: 2 / 2 / 5 / 5;
+}
