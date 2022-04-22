@@ -1,7 +1,6 @@
 .container {
-  display: grid;
+  display: grid; 
   background-color: #f3f3f3;
-  display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
   grid-column-gap: 0px;
@@ -9,6 +8,8 @@
 }
 
 .wrapped {
-  background-color: #fff;
+  background-color: green;
   grid-area: 2 / 2 / 5 / 5;
+  display: flex;
+  justify-content: center;
 }
