@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { fetchPlace } from "./fetchPlace";
 import "./InputForm.css";
 
@@ -13,7 +13,7 @@ const InputForm = (props) => {
     onDayChange,
     onYearChange,
     color,
-    onColorChange
+    onColorChange,
   } = props;
   const [city, setCity] = useState("");
   const [autocompleteCities, setAutocompleteCities] = useState([]);
@@ -66,6 +66,10 @@ const InputForm = (props) => {
       res.features &&
       setAutocompleteCities(res.features.map((place) => place.place_name));
     res.error ? setAutocompleteErr(res.error) : setAutocompleteErr("");
+  };
+
+  const generatePDF = () => {
+    window.print();
   };
 
   return (
@@ -156,14 +160,13 @@ const InputForm = (props) => {
         <label>Design</label>
         <br />
 
-
         <div style={{ display: "flex", flexFlow: "row wrap", gap: "4px" }}>
           <div
-            onClick={() => onColorChange('#000')}
+            onClick={() => onColorChange("#000")}
             style={{ backgroundColor: "#000", width: "40px", height: "40px" }}
           ></div>
           <div
-          onClick={() => onColorChange('#00008B')}
+            onClick={() => onColorChange("#00008B")}
             style={{
               backgroundColor: "#00008B",
               width: "40px",
@@ -171,11 +174,13 @@ const InputForm = (props) => {
             }}
           ></div>
           <div
-          onClick={() => {onColorChange('#0F0')}}
+            onClick={() => {
+              onColorChange("#0F0");
+            }}
             style={{ backgroundColor: "#0F0", width: "40px", height: "40px" }}
           ></div>
           <div
-          onClick={() => onColorChange('#FFA500')}
+            onClick={() => onColorChange("#FFA500")}
             style={{
               backgroundColor: "#FFA500",
               width: "40px",
@@ -183,7 +188,7 @@ const InputForm = (props) => {
             }}
           ></div>
           <div
-          onClick={() => onColorChange('#C4A484')}
+            onClick={() => onColorChange("#C4A484")}
             style={{
               backgroundColor: "#C4A484",
               width: "40px",
@@ -191,13 +196,12 @@ const InputForm = (props) => {
             }}
           ></div>
           <div
-          onClick={() => onColorChange('#F00')}
+            onClick={() => onColorChange("#F00")}
             style={{ backgroundColor: "#F00", width: "40px", height: "40px" }}
           ></div>
         </div>
         <div style={{ height: "35vh" }}></div>
         <hr />
-        <button type="submit" onClick={() => this.generatePDF()} style={{ backgroundColor: 'black', color : 'white'}}>Generate PDF</button>
       </form>
     </div>
   );

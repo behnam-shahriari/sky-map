@@ -21,13 +21,18 @@ class A4Page extends Component {
     return Intl.DateTimeFormat("en", { month: "long" }).format(new Date("2"));
   }
 
+  handleRef() {
+    this.props.handleRef((el) => (this.componentRef = el))
+    return (el) => (this.componentRef = el)
+  }
+
   render() {
-    const { dedication, location, day, month, year, color, lat, lon } =
+    const { dedication, location, day, month, year, color, lat, lon, ref } =
       this.props;
     return (
       <div className="containerA4">
         <div className="wrapped">
-          <VS color={color} lat={lat} lon={lon}/>
+          <VS color={color} lat={lat} lon={lon} />
           <label style={{ fontWeight: "bold" }}>{dedication}</label>
           <div style={{ height: "10vh" }}></div>
           <label style={{ fontWeight: "normal" }}>{location}</label>

@@ -37,3 +37,11 @@
   display: flex;
 }
 
+.right{
+  width: 30%;
+  padding-top: 10vh;
+  display: flex;
+  flex-flow: wrap column;
+  padding-left: 10vh;
+}
+
