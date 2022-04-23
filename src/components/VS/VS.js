@@ -6,9 +6,10 @@ const VS = (props) => {
   useEffect(() => {
     // componentWillUnmount
     return () => {
+      console.log(props.date)
       colArr.push(props.color)
     }
-  }, [props.color, props.lan, props.lon]);
+  }, [props.color, props.lan, props.lon, props.date]);
 
   const config = {
     azOff: 0,
@@ -16,7 +17,7 @@ const VS = (props) => {
     width: 400,
     latitude: props.lat,
     longitude: props.lon,
-    time: new Date(),
+    time: props.date ? new Date(props.date) : new Date(),
     skyColors: props.color,
     gridAzColor: "#100050",
     gridEqColor: "#105000",

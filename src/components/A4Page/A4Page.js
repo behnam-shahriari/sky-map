@@ -18,7 +18,7 @@ class A4Page extends Component {
   }
 
   monthToLong(mon) {
-    return Intl.DateTimeFormat("en", { month: "long" }).format(new Date("2"));
+    return Intl.DateTimeFormat("en", { month: "long" }).format(new Date(mon ? mon : '1'));
   }
 
   handleRef() {
@@ -32,7 +32,7 @@ class A4Page extends Component {
     return (
       <div className="containerA4">
         <div className="wrapped">
-          <VS color={color} lat={lat} lon={lon} />
+          <VS color={color} lat={lat} lon={lon} date={`${this.monthToLong(month)} ${day} ${year}`} />
           <label style={{ fontWeight: "bold" }}>{dedication}</label>
           <div style={{ height: "10vh" }}></div>
           <label style={{ fontWeight: "normal" }}>{location}</label>
