@@ -2,34 +2,40 @@ import React, { Component } from "react";
 import VirtualSky from "../../containers/VirtualSkyModule/VirtualSkyModule";
 
 class VS extends Component {
+  colorArr = [];
+  constructor(props) {
+    super(props);
+    this.colorArr.push(props.color);
+  }
+
   config = {
     azOff: 0,
-    height: 300,
-    width: 300,
+    height: 400,
+    width: 400,
     latitude: 51.746449,
     longitude: 19.620693,
     time: new Date(),
-    skyColors: ["#000", "#100050"],
+    skyColors: this.colorArr,
     gridAzColor: "#100050",
     gridEqColor: "#105000",
     gridGalColor: "#500020",
     language: "en",
     visibility: {
       starMag: 6,
-      showStarLabels: true,
-      showPlanets: true,
-      showPlanetsOrbit: true,
-      showPlanetsLabels: true,
-      showSunMoon: true,
+      showStarLabels: false,
+      showPlanets: false,
+      showPlanetsOrbit: false,
+      showPlanetsLabels: false,
+      showSunMoon: false,
       showConstellations: true,
-      showConstellationBoundaries: true,
-      showConstellationLabels: true,
-      showAzLabels: true,
-      showAzGrid: true,
-      showEqGrid: true,
-      showGalGrid: true,
-      showGalaxy: true,
-      showInfo: true,
+      showConstellationBoundaries: false,
+      showConstellationLabels: false,
+      showAzLabels: false,
+      showAzGrid: false,
+      showEqGrid: false,
+      showGalGrid: false,
+      showGalaxy: false,
+      showInfo: false,
     },
   };
 

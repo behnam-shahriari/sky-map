@@ -1,15 +1,14 @@
-.container {
-  display: grid; 
+.containerA4 {
+  width: 70%;
   background-color: #f3f3f3;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  display: flex;
+  justify-content: center;
 }
 
 .wrapped {
-  background-color: green;
-  grid-area: 2 / 2 / 5 / 5;
-  display: flex;
-  justify-content: center;
+  background-color: #fff;
+  padding: 2%;
+  margin: 5% 0;
+  text-align: center;
+  box-shadow: 0px 1px 5px 0px gray;
 }
