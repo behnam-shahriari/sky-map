@@ -1,4 +1,19 @@
 .containerIF {
+  padding-top: 5%;
+  padding-left: 1%;
     background-color: #fff;
     width: 30%;
+  }
+
+  input, textarea{
+    background-color: #f3f3f3;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  .square{
+    height:500px;
+    width: 50px;
   }

@@ -1,21 +1,23 @@
-import React, { Component } from "react";
+import React, {  useEffect } from "react";
 import VirtualSky from "../../containers/VirtualSkyModule/VirtualSkyModule";
 
-class VS extends Component {
-  colorArr = [];
-  constructor(props) {
-    super(props);
-    this.colorArr.push(props.color);
-  }
+const VS = (props) => {
+  const colArr = [];
+  useEffect(() => {
+    // componentWillUnmount
+    return () => {
+      colArr.push(props.color)
+    }
+  }, [props.color, props.lan, props.lon]);
 
-  config = {
+  const config = {
     azOff: 0,
     height: 400,
     width: 400,
-    latitude: 51.746449,
-    longitude: 19.620693,
+    latitude: props.lat,
+    longitude: props.lon,
     time: new Date(),
-    skyColors: this.colorArr,
+    skyColors: props.color,
     gridAzColor: "#100050",
     gridEqColor: "#105000",
     gridGalColor: "#500020",
@@ -39,9 +41,7 @@ class VS extends Component {
     },
   };
 
-  render() {
-    return <VirtualSky id="startmap" config={this.config} />;
-  }
-}
+  return <VirtualSky id="startmap" config={config} />;
+};
 
 export default VS;
