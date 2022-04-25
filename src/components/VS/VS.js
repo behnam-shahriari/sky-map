@@ -13,6 +13,8 @@ const VS = (props) => {
 
   const config = {
     azOff: 0,
+    height: 150,
+    width: 150,
     latitude: props.lat,
     longitude: props.lon,
     time: props.date ? new Date(props.date) : new Date(),
