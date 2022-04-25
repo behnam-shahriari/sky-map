@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/sky-map/static/css/main.32a4113f.css",
-    "main.js": "/sky-map/static/js/main.796fe664.js",
+    "main.js": "/sky-map/static/js/main.4e8f21f3.js",
     "static/js/787.a7a9e43d.chunk.js": "/sky-map/static/js/787.a7a9e43d.chunk.js",
     "index.html": "/sky-map/index.html",
     "main.32a4113f.css.map": "/sky-map/static/css/main.32a4113f.css.map",
-    "main.796fe664.js.map": "/sky-map/static/js/main.796fe664.js.map",
+    "main.4e8f21f3.js.map": "/sky-map/static/js/main.4e8f21f3.js.map",
     "787.a7a9e43d.chunk.js.map": "/sky-map/static/js/787.a7a9e43d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.32a4113f.css",
-    "static/js/main.796fe664.js"
+    "static/js/main.4e8f21f3.js"
   ]
 }
